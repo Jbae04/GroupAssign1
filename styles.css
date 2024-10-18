@@ -4,97 +4,103 @@
     --accent-color: #ffd700;
     --text-color: #333;
   }
-  
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--secondary-color);
   }
-  
+
   #navbar {
     position: sticky;
     top: 0;
     background-color: var(--secondary-color);
-    padding: 1rem;
+    min-height: 150px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-image: url('Assets/rise_in_sea_level.jpg.webp');
+    background-size: cover; /* Ensures the background image covers the navbar */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+
+    padding: 10px 20px;
   }
-  
+
   #navbar ul {
     display: flex;
     list-style-type: none;
   }
-  
+
   #navbar li {
     margin-right: 2rem;
   }
-  
+
   #navbar a {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
   }
-  
+
   #navbar a:hover {
     color: var(--accent-color);
   }
-  
+
   main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
   }
-  
+
   section {
     margin-bottom: 4rem;
   }
-  
+
   h1, h2 {
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-weight: 300;
   }
-  
+
   h1 {
     font-size: 3.5rem;
     text-align: center;
     margin-top: 2rem;
   }
-  
+
   h2 {
     font-size: 2.5rem;
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.5rem;
   }
-  
+
   h3 {
     font-size: 1.8rem;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
   }
-  
+
   p {
     margin-bottom: 1rem;
     font-size: 1.1rem;
   }
-  
+
   .fact-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
-  
+
   .fact {
     background-color: #fff;
     padding: 1.5rem;
@@ -102,30 +108,30 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   .fact:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
   }
-  
+
   #action ul {
     list-style-type: none;
     margin-left: 1rem;
   }
-  
+
   #action li {
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1.5rem;
   }
-  
+
   #action li::before {
     content: "→";
     position: absolute;
     left: 0;
     color: var(--accent-color);
   }
-  
+
   footer {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -133,67 +139,74 @@
     padding: 1rem;
     margin-top: 2rem;
   }
-  
+
   /* Pseudo-classes and pseudo-elements */
   #navbar a:active {
     color: var(--accent-color);
   }
-  
+
   .fact:nth-child(even) {
     background-color: #f9f9f9;
   }
-  
+
   h2::before {
     content: "▶ ";
     color: var(--accent-color);
   }
-  
+
   #home p::first-letter {
     font-size: 1.5em;
     font-weight: bold;
     color: var(--accent-color);
   }
-  
+
   .fact:hover::after {
     content: "➡";
     margin-left: 0.5rem;
     color: var(--accent-color);
   }
-  
+
   #navbar a:focus {
     outline: 2px solid var(--accent-color);
   }
-  
+
   #action ul li:last-child {
     font-weight: bold;
   }
-  
+
   /* Media query for mobile screens */
   @media screen and (max-width: 600px) {
     #navbar {
       flex-direction: column;
     }
-  
+
     #navbar ul {
       flex-direction: column;
       align-items: center;
       margin-top: 1rem;
     }
-  
+
     #navbar li {
       margin-right: 0;
       margin-bottom: 0.5rem;
     }
-  
+
     h1 {
       font-size: 2.5rem;
     }
-  
+
     h2 {
       font-size: 2rem;
     }
-  
+
     .fact-container {
       grid-template-columns: 1fr;
     }
   }
+
+.centered-text {
+  text-align: center;
+  margin: 0 auto; /* Optional: Add this if you want to center the block element */
+}
+
+
